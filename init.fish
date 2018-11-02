@@ -1,7 +1,8 @@
-set -l linuxbrew_bin_path "$HOME/.linuxbrew/bin"
-set -l linuxbrew_sbin_path "$HOME/.linuxbrew/sbin"
-set -l linuxbrew_manpath "$HOME/.linuxbrew/share/man"
-set -l linuxbrew_infopath "$HOME/.linuxbrew/share/info"
+set -l default_linuxbrew_home "/home/linuxbrew"
+set -l linuxbrew_bin_path "$default_linuxbrew_home/.linuxbrew/bin"
+set -l linuxbrew_sbin_path "$default_linuxbrew_home/.linuxbrew/sbin"
+set -l linuxbrew_manpath "$default_linuxbrew_home/.linuxbrew/share/man"
+set -l linuxbrew_infopath "$default_linuxbrew_home/.linuxbrew/share/info"
 
 contains -- $linuxbrew_bin_path $PATH
   or set -gx PATH $linuxbrew_bin_path $PATH
